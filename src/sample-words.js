@@ -1,15 +1,13 @@
 const samples = [
     'toprak',
-    'bilgi',
+    'su',
     'kabak',
     'renk',
-    'semizotu',
     'hak',
     'hukuk',
     'adalet',
-    'kelam',
     'kek',
-    'televizyon',
+    'vizyon',
 ];
 
 exports.getRandomWord = () => {
