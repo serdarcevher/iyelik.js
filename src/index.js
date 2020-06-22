@@ -19,6 +19,10 @@ class turkishPossessiveSuffixHandler {
         if (content == "su")// the only exception...
             content+= "y"
 
+        if (content == "hak") { // oh, another exception!..
+            content+= "k";
+        }
+
         this.person = person;
 
         this.phrase = {};
@@ -32,6 +36,7 @@ class turkishPossessiveSuffixHandler {
 
         //TODO: handle "karın", "kayısı" etc.
         //TODO: handle "havuç çorbası"
+        //TODO: handle "onun semizotusu"
 
         this.suffix = this.suffixes.get(this.person, this.phrase);
 

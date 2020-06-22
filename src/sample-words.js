@@ -1,19 +1,15 @@
 const samples = [
-    'hikaye',
     'toprak',
-    'bisiklet',
-    'bilgisayar',
+    'bilgi',
     'kabak',
     'renk',
     'semizotu',
-    'koltuk',
     'hak',
     'hukuk',
     'adalet',
     'kelam',
     'kek',
     'televizyon',
-    'kulaklık'
 ];
 
 exports.getRandomWord = () => {

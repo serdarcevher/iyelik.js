@@ -30,6 +30,10 @@ class handler {
 
                 phrase = phrase.replace(/.$/, this.softConsonants[consonantIndex]);
             }
+            
+            //console.log('exceptions DO NOT include ' + lastWord.toLocaleLowerCase('tr'));
+        } else {
+            //console.log('exceptions DO include ' + lastWord.toLocaleLowerCase('tr'));
         }
 
         return phrase;
