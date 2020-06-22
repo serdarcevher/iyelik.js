@@ -1,0 +1,8 @@
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: "bundle.js",
+    library: "tpsh"
+  },
+  mode: "development"
+}

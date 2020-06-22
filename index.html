@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Testing iyelik.js</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            padding:20px;
+        }
+
+        #samples { 
+            margin-bottom: 20px; 
+        }
+    </style>
+    <script type="text/javascript" src="dist/bundle.js"></script>
+    <script>
+        let persons = ['benim', 'senin', 'onun', 'bizim', 'sizin', 'onların'];
+        let content = '';
+
+        function handle(value, event) {
+            content = '';
+            if (value.length > 1) {
+                persons.forEach(person => {
+                    content += "<em>" + person + "</em>" + " <b>" + value.iyelik(person) + '</b><br />';
+                });
+            }
+
+            document.getElementById('result').innerHTML = content;
+        }
+
+        window.onload = function () {
+            tpsh.default.populateSamples();
+
+            let word = 'toprak';
+            console.log(word.iyelik('sizin'));
+
+            word = 'bilgisayar';
+            console.log(word.iyelik('benim'));
+
+            document.querySelectorAll(".sample-button").forEach(sampleButton => {
+                sampleButton.addEventListener('click', function(e) {
+                    document.getElementById('text').value = e.target.innerText;
+                    handle(e.target.innerText, event);
+                });
+            });
+        };
+
+    </script>
+</head>
+<body>
+    <div id="samples" class="content-holder"></div>
+    <input type="text" id="text" oninput="handle(this.value, event)" placeholder="Write a word in Turkish" autocomplete="off"  />
+    <div id="result" class="content-holder" style="position:relative;min-height:200px;margin-top:10px;"></div>
+</body>
