@@ -1,4 +1,4 @@
-class handler {
+class utils {
     constructor() {
         this.vowels = 'aeıioöuü';
     }
@@ -40,4 +40,4 @@ class handler {
     }
 }
 
-exports.handler = handler;
+export default utils;

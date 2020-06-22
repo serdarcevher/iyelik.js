@@ -1,5 +1,6 @@
 import utils from './library/utils';
 import suffixes from './library/suffixes';
+import mutationHandler from './library/consonant-mutation/handler';
 import samples from './sample-words';
 
 String.prototype.iyelik = function (person) {
@@ -9,8 +10,9 @@ String.prototype.iyelik = function (person) {
 class turkishPossessiveSuffixHandler {
 
     constructor() {
-        this.utils = new utils.handler();
+        this.utils = new utils();
         this.suffixes = new suffixes();
+        this.mutationHandler = new mutationHandler();
     }
 
     getPossessedVersion (person, content) {
@@ -25,9 +27,11 @@ class turkishPossessiveSuffixHandler {
         this.phrase.endsWithConsonant = !this.utils.vowels.includes(this.phrase.lastLetter);
 
         if (this.phrase.endsWithConsonant) {
-            //this.phrase.content = this.getMutatedPhrase(this.phrase.content);
+            this.phrase.content = this.mutationHandler.getMutatedPhrase(this.phrase.content);
         }
 
+        //TODO: handle "karın", "kayısı" etc.
+        //TODO: handle "havuç çorbası"
 
         this.suffix = this.suffixes.get(this.person, this.phrase);
 

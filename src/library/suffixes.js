@@ -3,7 +3,7 @@ import utils from './utils';
 class handler {
 
     constructor() {
-        this.utils = new utils.handler();
+        this.utils = new utils();
     }
 
     getAllForPerson (person, endsWithConsonant) {
