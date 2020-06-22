@@ -20,7 +20,7 @@ See it working below:
    console.log(word.iyelik('benim'));
    //outputs "kalemim"
   
-   word = 'ev;
+   word = 'ev';
    console.log(word.iyelik('sizin'));
    //outputs "eviniz"
 </script>
