@@ -8,23 +8,41 @@ See it working below:
 
 ![See it working](https://github.com/sahtepetrucci/iyelik.js/raw/master/demonstrate.gif "See it working")
 
-## Demo
-1) Clone or download the repo
-2) Open index.html in your browser and write anything in the text input
+## Installation
+```shell script
+npm install iyelik
+# or
+yarn add iyelik
+```
 
 ## Usage
+```js
+const iyelik = require('iyelik')
+
+let word = 'kalem';
+word.iyelik('benim') # => 'kalemim'
+
+word = 'ev';
+word.iyelik('sizin') # => 'eviniz'
+word.iyelik('sizin', true) # => 'evleriniz'
+```
+
+## Usage in browser
 ```html
 <script type="text/javascript" src="dist/bundle.js"></script>
 <script>
    let word = 'kalem';
-   console.log(word.iyelik('benim'));
-   //outputs "kalemim"
+   console.log(word.iyelik('benim')); //"kalemim"
   
    word = 'ev';
-   console.log(word.iyelik('sizin'));
-   //outputs "eviniz"
+   console.log(word.iyelik('sizin')); //"eviniz"
+   console.log(word.iyelik('sizin', true)); //"evleriniz"
 </script>
 ```
+
+## Demo
+1) Clone or download the repo
+2) Open index.html in your browser and write anything in the text input
 
 ## Notes
 
@@ -33,3 +51,10 @@ The code attempts to apply consonant softening as well as adding possessive suff
 
 - mutation exceptions list is missing (probably lots of) words,
 - some phrases are already known to be not handled properly (such as "havuç çorbası", "semizotu", "karın") thus the algorithm requires more tinkering.
+
+## TODO
+- handling edge cases
+- writing unit tests
+
+If you would like to contribute feel free to submit a pull request.
+

@@ -30,11 +30,12 @@
         window.onload = function () {
             tpsh.default.populateSamples();
 
-            let word = 'toprak';
-            console.log(word.iyelik('sizin'));
-
-            word = 'bilgisayar';
+            let word = 'kalem';
             console.log(word.iyelik('benim'));
+
+            word = 'ev';
+            console.log(word.iyelik('sizin'));
+            console.log(word.iyelik('sizin', true));
 
             document.querySelectorAll(".sample-button").forEach(sampleButton => {
                 sampleButton.addEventListener('click', function(e) {
