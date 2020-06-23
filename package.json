@@ -1,6 +1,6 @@
 {
   "name": "iyelik",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "An helper tool to add possessive suffixes to improper nouns in Turkish.",
   "main": "index.js",
   "scripts": {
