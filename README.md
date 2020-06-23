@@ -15,18 +15,6 @@ npm install iyelik
 yarn add iyelik
 ```
 
-## Usage
-```js
-const iyelik = require('iyelik')
-
-let word = 'kalem';
-word.iyelik('benim') # => 'kalemim'
-
-word = 'ev';
-word.iyelik('sizin') # => 'eviniz'
-word.iyelik('sizin', true) # => 'evleriniz'
-```
-
 ## Usage in browser
 ```html
 <script type="text/javascript" src="dist/bundle.js"></script>
@@ -38,6 +26,20 @@ word.iyelik('sizin', true) # => 'evleriniz'
    console.log(word.iyelik('sizin')); //"eviniz"
    console.log(word.iyelik('sizin', true)); //"evleriniz"
 </script>
+```
+
+
+## Usage in node (caution: not working yet)
+~~
+```js
+const iyelik = require('iyelik')
+
+let word = 'kalem';
+word.iyelik('benim') # => 'kalemim'
+
+word = 'ev';
+word.iyelik('sizin') # => 'eviniz'
+word.iyelik('sizin', true) # => 'evleriniz'
 ```
 
 ## Demo
