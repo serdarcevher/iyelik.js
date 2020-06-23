@@ -1,20 +1,24 @@
 {
   "name": "iyelik",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "An helper tool to add possessive suffixes to improper nouns in Turkish.",
   "main": "src/index.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahtepetrucci/iyelik.js.git"
+  },
   "keywords": [
-    "iyelik",
     "turkish",
+    "iyelik",
     "aitlik",
     "posessive",
     "suffix"
   ],
-  "author": "Serdar Cevher",
+  "author": "Serdar Cevher <scevher@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^4.43.0",

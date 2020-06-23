@@ -1,7 +1,7 @@
 import utils from '../utils';
 import mutationExceptions from './exceptions';
 
-class handler {
+class mutationHandler {
 
     constructor() {
         this.utils = new utils();
@@ -36,4 +36,4 @@ class handler {
     }
 }
 
-export default handler;
+export default mutationHandler;

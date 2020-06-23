@@ -1,6 +1,6 @@
 import wordsAndLetters from './words-and-letters';
 
-class handler {
+class additionHandler {
 
     constructor() {
         this.wordsAndLetters = wordsAndLetters;
@@ -23,4 +23,4 @@ class handler {
     }
 }
 
-export default handler;
+export default additionHandler;
