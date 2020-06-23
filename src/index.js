@@ -4,8 +4,8 @@ import mutationHandler from './library/consonant-mutation/handler';
 import additionHandler from './library/consonant-addition/handler';
 import samples from './sample-words';
 
-String.prototype.iyelik = function (person) {
-    return new turkishPossessiveSuffixHandler().getPossessedVersion(person, this);
+String.prototype.iyelik = function (person, isPlural = false) {
+    return new turkishPossessiveSuffixHandler().get(this, person, isPlural);
 };
 
 class turkishPossessiveSuffixHandler {
@@ -17,7 +17,23 @@ class turkishPossessiveSuffixHandler {
         this.additionHandler = new additionHandler();
     }
 
-    getPossessedVersion (person, content) {
+    get(content, person, isPlural) {
+        if (isPlural) {
+            content = this.pluralize(content);
+        }
+
+        return this.possess(content, person);
+    }
+
+    pluralize(content) {
+        let lastVowel = this.utils.getLastVowel(content.toLocaleLowerCase('tr'));
+        if ('aıou'.includes(lastVowel)) {
+            return content + 'lar';
+        }
+        return content + 'ler';
+    }
+
+    possess (content, person) {
 
         this.person = person;
         this.phrase = {
