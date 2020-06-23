@@ -42,4 +42,4 @@ const list = [
     'turp'
 ];
 
-export default list;
+module.exports = list;

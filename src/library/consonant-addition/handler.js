@@ -1,4 +1,4 @@
-import wordsAndLetters from './words-and-letters';
+const wordsAndLetters = require('./words-and-letters');
 
 class additionHandler {
 
@@ -23,4 +23,4 @@ class additionHandler {
     }
 }
 
-export default additionHandler;
+module.exports = additionHandler;

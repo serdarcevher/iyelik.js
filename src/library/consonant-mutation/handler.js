@@ -1,5 +1,5 @@
-import utils from '../utils';
-import mutationExceptions from './exceptions';
+const utils = require('../utils');
+const mutationExceptions = require('./exceptions');
 
 class mutationHandler {
 
@@ -36,4 +36,4 @@ class mutationHandler {
     }
 }
 
-export default mutationHandler;
+module.exports = mutationHandler;

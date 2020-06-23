@@ -8,11 +8,27 @@ See it working below:
 
 ![See it working](https://github.com/sahtepetrucci/iyelik.js/raw/master/demonstrate.gif "See it working")
 
+
+## Demo
+1) Clone or download the repo
+2) Open index.html in your browser and write anything in the text input
+
 ## Installation
 ```shell script
 npm install iyelik
 # or
 yarn add iyelik
+```
+## Usage in node
+```js
+const iyelik = require('iyelik')
+
+let word = 'kalem';
+word.iyelik('benim') # => 'kalemim'
+
+word = 'ev';
+word.iyelik('sizin') # => 'eviniz'
+word.iyelik('sizin', true) # => 'evleriniz'
 ```
 
 ## Usage in browser
@@ -27,24 +43,6 @@ yarn add iyelik
    console.log(word.iyelik('sizin', true)); //"evleriniz"
 </script>
 ```
-
-
-## Usage in node (caution: not working yet)
-~~
-```js
-const iyelik = require('iyelik')
-
-let word = 'kalem';
-word.iyelik('benim') # => 'kalemim'
-
-word = 'ev';
-word.iyelik('sizin') # => 'eviniz'
-word.iyelik('sizin', true) # => 'evleriniz'
-```
-
-## Demo
-1) Clone or download the repo
-2) Open index.html in your browser and write anything in the text input
 
 ## Notes
 

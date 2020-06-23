@@ -3,4 +3,4 @@ let list = {
     'hak': 'k',
 }
 
-export default list;
+module.exports = list;

@@ -1,7 +1,7 @@
-import utils from './utils';
-import suffixes from './suffixes';
-import mutationHandler from './consonant-mutation/handler';
-import additionHandler from './consonant-addition/handler';
+const utils = require('./utils');
+const suffixes = require('./suffixes');
+const mutationHandler = require('./consonant-mutation/handler');
+const additionHandler = require('./consonant-addition/handler');
 
 class turkishPossessiveSuffixHandler {
 
@@ -62,4 +62,4 @@ class turkishPossessiveSuffixHandler {
     }
 }
 
-export default turkishPossessiveSuffixHandler;
+module.exports = turkishPossessiveSuffixHandler;

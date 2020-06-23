@@ -2,7 +2,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    library: "tpsh"
+    library: "iyelik"
   },
   mode: "development"
 }

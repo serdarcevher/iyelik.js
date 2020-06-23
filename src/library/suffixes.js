@@ -1,4 +1,4 @@
-import utils from './utils';
+const utils = require('./utils');
 
 class handler {
 
@@ -91,4 +91,4 @@ class handler {
 
 }
 
-export default handler;
+module.exports = handler;

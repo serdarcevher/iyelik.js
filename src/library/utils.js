@@ -49,4 +49,4 @@ class utils {
     }
 }
 
-export default utils;
+module.exports = utils;
