@@ -12,11 +12,7 @@ class handler {
     }
 
     getMutatedPhrase(phrase) {
-        let lastWord = phrase; 
-        if (phrase.indexOf(' ') >= 0) {
-            let words = phrase.split(" ");
-            lastWord = words[words.length - 1];
-        }
+        let lastWord = this.utils.getLastWord(phrase); 
 
         if (!this.exceptions.includes(lastWord.toLocaleLowerCase('tr'))) {
             let lastConsonant = this.utils.getLastConsonant(phrase);

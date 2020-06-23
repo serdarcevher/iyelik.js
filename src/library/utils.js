@@ -9,7 +9,7 @@ class utils {
 
     getLastConsonant(phrase) {
         let i = 1;
-        let lastConsonant = this.getLastLetter(phrase);
+        let lastConsonant = this.getLastLetter(phrase).toLocaleLowerCase('tr');
 
         while (this.vowels.includes(lastConsonant)) {
 
@@ -25,7 +25,7 @@ class utils {
 
     getLastVowel(phrase) {
         let i = 1;
-        let lastVowel = this.getLastLetter(phrase);
+        let lastVowel = this.getLastLetter(phrase).toLocaleLowerCase('tr');
 
         while (!this.vowels.includes(lastVowel)) {
 
@@ -37,6 +37,15 @@ class utils {
         }
 
         return lastVowel;
+    }
+
+    getLastWord(phrase) {
+        let lastWord = phrase; 
+        if (phrase.indexOf(' ') >= 0) {
+            let words = phrase.split(" ");
+            lastWord = words[words.length - 1];
+        }
+        return lastWord;
     }
 }
 

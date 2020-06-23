@@ -60,10 +60,10 @@ class handler {
 
     get (person, phrase) {
         let suffixes = this.getAllForPerson(person, phrase.endsWithConsonant)
-        let lastVowel = this.utils.getLastVowel(phrase.content);
+        let lastVowel = this.utils.getLastVowel(phrase.content.toLocaleLowerCase('tr'));
 
         let index = 0;
-        switch (lastVowel.toLocaleLowerCase('tr')) {
+        switch (lastVowel) {
             case 'a':
             case 'ı':
                 index = 0;
