@@ -6,7 +6,7 @@ An helper tool to add possessive suffixes to improper nouns in Turkish.
 This tool handles posssessive suffixes such as "kalem**im**" or "ev**iniz**".
 See it working below:
 
-![See it working](https://github.com/sahtepetrucci/iyelik.js/raw/master/demonstrate.gif "See it working")
+![See it working](https://github.com/serdarcevher/iyelik.js/raw/master/demonstrate.gif "See it working")
 
 
 ## Demo
